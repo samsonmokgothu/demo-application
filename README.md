@@ -1,13 +1,4 @@
 
-# Code Structure
-
-## bank-common
-   This is the library that contains domain models that cuts accross multiple projects
-## account-api
-   Spring boot restful service that exposes withdrawal endpoint
-## sns-api
-   Spring boot restful service that exposes publish endpoint. 
-
 # Approach
 *  Problem with current solution is that it is following monolithic architecture.
    There is no seperation of concerns as both account balance, withrawal and sending of notification happens in one method.
@@ -30,6 +21,15 @@
    This means should anything fail during notification the overall transaction will still be successful (this needs to be confirmed with business).
    To ensure the customer is eventually notified, the event can be persisted somewhere and resend later when the root cause of notification failure is resolved.
    I have also implemented retry logic in the account-api to retry sending notification 3 times. 
+
+# Code Structure
+
+## bank-common
+   This is the library that contains domain models that cuts accross multiple projects
+## account-api
+   Spring boot restful service that exposes withdrawal endpoint
+## sns-api
+   Spring boot restful service that exposes publish endpoint. 
 
 # Building code
    In project root directory 'mvn clean install'.
