@@ -8,9 +8,8 @@
 ## sns-api
    Spring boot restful service that exposes publish endpoint. 
 
-Approach:
-
-   Problem with current solution is that it is following monolithic architecture.
+#Approach
+*  Problem with current solution is that it is following monolithic architecture.
    There is no seperation of concerns as both account balance, withrawal and sending of notification happens in one method.
    No transactions defined and can cause the system to be incosistent should one of the steps fail.
    
