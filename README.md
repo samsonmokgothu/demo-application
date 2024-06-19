@@ -65,7 +65,7 @@ This code was developed and tested using below tools and versions.
 * METHOD: POST
 * BODY: {
       "accountId": 10000,
-      "amount": -1.00
+      "amount": 10.00
    }
  * DATA
    Below data is inserted in H2 database and can be used for testing purposes
