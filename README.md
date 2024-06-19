@@ -59,15 +59,15 @@ This code was developed and tested using below tools and versions.
 ### Start in live mode (with sns connection on)
    mvn spring-boot:run
 
-# Testing project: account-api
-   URL: http://localhost:8081//bank/account/withdraw
-   METHOD: POST
-   BODY: {
+# Tests
+## account-api
+* URL: http://localhost:8081//bank/account/withdraw
+* METHOD: POST
+* BODY: {
       "accountId": 10000,
       "amount": -1.00
    }
-
-# DATA
+ * DATA
    Below data is inserted in H2 database and can be used for testing purposes
    INSERT INTO accounts(id, balance) VALUES(10000, 200.00);
    INSERT INTO accounts(id, balance) VALUES(10001, 12000.00);
